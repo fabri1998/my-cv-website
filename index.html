@@ -11,17 +11,17 @@
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 30px;
-      background-color: #f4f4f4; /* Ljusgrå bakgrund från vdmotor.se */
-      color: #333333; /* Mörkare text för bättre kontrast */
+      background: linear-gradient(135deg, rgb(37, 150, 190), #000000); /* Gradient mellan färgen och Jet Black */
+      color: #FFFFFF; /* Vit text för hög kontrast */
       line-height: 1.6;
     }
     header {
       text-align: center;
       padding: 20px;
-      background-color: #ffffff; /* Vit bakgrund för header */
+      background-color: #1c1c1c; /* Mörk grå för header */
       border-radius: 10px;
-      color: #333333; /* Mörkare text för header */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtil skugga */
+      color: #FFFFFF; /* Vit text för header */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skugga */
     }
     .profile-card {
         margin: 20px auto;
@@ -32,7 +32,7 @@
         width: 140px;
         height: 140px;
         border-radius: 50%; /* Rund bild */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Skugga */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Skugga */
         object-fit: cover; /* Behåll proportioner */
         object-position: center; /* Fokus på mitten av bilden */
         transform: scale(0.9); /* Zooma ut bilden till 90% */
@@ -40,38 +40,38 @@
     .profile-card h1 {
       margin: 10px 0 5px;
       font-size: 1.5em;
-      color: #333333; /* Mörkare text för bättre kontrast */
+      color: #FFFFFF; /* Vit text */
     }
     .profile-card p {
       font-size: 1em;
-      color: #555555; /* Neutral färg för text */
+      color: #DDDDDD; /* Ljusgrå text för bättre kontrast */
     }
     section {
-      background-color: #ffffff; /* Vit bakgrund för sektioner */
+      background-color: rgba(255, 255, 255, 0.1); /* Transparent vit för sektioner */
       padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtil skugga */
-      border-bottom: 1px solid #dddddd; /* Diskret avdelare */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skugga */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Diskret linje */
     }
     section h2 {
       margin-top: 0;
-      color: #555555; /* Mörkare grå för rubriker */
+      color: #FFFFFF; /* Vit text för rubriker */
     }
     a {
-      color: #555555; /* Mörkgrå för länkar */
+      color: #FFD700; /* Guld för länkar */
       text-decoration: none;
       transition: color 0.3s ease; /* Smooth transition */
     }
     a:hover {
-      color: #000000; /* Svart vid hover */
+      color: #FFFFFF; /* Vit vid hover */
       text-decoration: underline;
     }
     footer {
       text-align: center;
       margin-top: 20px;
       font-size: 0.9em;
-      color: #777777; /* Neutral grå för footer-text */
+      color: #BBBBBB; /* Ljusare grå för footer-text */
     }
     /* Responsiv design för mobiler */
     @media (max-width: 768px) {
@@ -85,7 +85,7 @@
         font-size: 1em;
       }
     }
-  </style>
+</style>
 </head>
 <body>
   <header>
@@ -133,7 +133,7 @@
     </p>
     <p>
       <img src="https://img.icons8.com/ios-glyphs/20/555555/github.png" alt="GitHub" class="icon">
-      <a href="https://github.com/fabrizio-mugni" target="_blank">https://github.com/fabri1998</a>
+      <a href="https://github.com/fabri1998" target="_blank">https://github.com/fabri1998</a>
     </p>
   </section>
   <footer>
