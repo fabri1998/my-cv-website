@@ -73,21 +73,16 @@
     }
     /* Skills-styling */
     .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsivt rutnät */
+      gap: 20px; /* Avstånd mellan logotyper */
+      justify-items: center; /* Centrera innehåll i varje kolumn */
       padding: 20px 0;
-    }
-    .skill {
-      text-align: center;
-      flex: 1 1 100px; /* Flexibel layout */
-      max-width: 120px;
     }
     .skill img {
       width: 80px;
       height: auto;
-      margin-bottom: 5px; /* Minskad marginal mellan bild och text */
+      margin-bottom: 10px; /* Avstånd mellan bild och text */
       filter: brightness(1); /* Anpassad ljusstyrka */
       transition: transform 0.3s, filter 0.3s;
     }
@@ -162,15 +157,19 @@
       <div class="skill">
         <img src="Screenshot from 2025-01-19 16-10-17.png" alt="IoT-Open" title="IoT-Open">
         <p>IoT-Open</p>
-        <div class="skill">
+      </div>
+      <div class="skill">
         <img src="Screenshot from 2025-01-19 16-03-24.png" alt="Visual Studio Code" title="Visual Studio Code">
         <p>Visual Studio Code</p>
+      </div>
       <div class="skill">
         <img src="Screenshot from 2025-01-19 16-03-24.png" alt="Raspberry Pi" title="Raspberry Pi">
         <p>Raspberry Pi</p>
+      </div>
       <div class="skill">
         <img src="Screenshot from 2025-01-19 16-03-24.png" alt="GitHub" title="GitHub">
         <p>GitHub</p>
+      </div>
       <div class="skill">
         <img src="Screenshot from 2025-01-19 16-03-24.png" alt="Things Board" title="Things Board">
         <p>Things Board</p>
@@ -197,4 +196,3 @@
   </footer>
 </body>
 </html>
-
