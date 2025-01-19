@@ -23,18 +23,21 @@
       color: #F0F0F0; /* Lite ljusare text för att framhäva */
     }
     .profile-card {
-      margin: 20px auto;
-      text-align: center;
+        margin: 20px auto;
+        display: inline-block;
+        text-align: center;
     }
     .profile-card img {
-      width: 150px; /* Bildens bredd */
-      height: 150px; /* Bildens höjd */
-      border-radius: 50%; /* Gör bilden rund */
+      width: 140px; /* Mindre bildstorlek för en mer nett känsla */
+      height: 140px; /* Anpassad höjd för proportioner */
+      border-radius: 50%; /* Rund bild */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Skugga för en flytande effekt */
+      object-fit: cover; /* Säkerställer att bilden fyller ramen utan att bli förvrängd */
     }
     .profile-card h1 {
       margin: 10px 0 5px;
       font-size: 1.5em;
-      color: #eeeeee; /* Guld-färg för namnet */
+      color: #eeeeee; 
     }
     .profile-card p {
       font-size: 1em;
