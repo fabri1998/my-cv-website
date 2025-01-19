@@ -22,13 +22,25 @@
       border-radius: 10px;
       color: #F0F0F0; /* Lite ljusare text för att framhäva */
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    .profile-card {
+      margin: 20px auto;
+      text-align: center;
     }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
+    .profile-card img {
+      width: 150px; /* Bildens bredd */
+      height: 150px; /* Bildens höjd */
+      border-radius: 50%; /* Gör bilden rund */
+      border: 3px solid #000000; /* Guld-färgad ram */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skugga */
+    }
+    .profile-card h1 {
+      margin: 10px 0 5px;
+      font-size: 1.5em;
+      color: #FFD700; /* Guld-färg för namnet */
+    }
+    .profile-card p {
+      font-size: 1em;
+      color: #E0E0E0;
     }
     section {
       background-color: #2B2B2B; /* Mellangrå bakgrund för sektioner */
@@ -48,7 +60,7 @@
       transition: color 0.3s ease; /* Smooth transition */
     }
     a:hover {
-      color: #230d65; /* Guldton vid hover */
+      color: #000000; /* Guldton vid hover */
       text-decoration: underline;
     }
     footer {
@@ -73,6 +85,8 @@
 </head>
 <body>
   <header>
+    <div class="profile-card">
+      <img src="/home/fabriziomugni/Pictures/YO alt="Profilbild">
     <h1>Fabrizio Muguni</h1>
     <p>IoT-Projektledare</p>
   </header>
@@ -114,7 +128,7 @@
     </p>
     <p>
       <img src="https://img.icons8.com/ios-glyphs/20/e0e0e0/github.png" alt="GitHub" class="icon">
-      <a href="https://github.com/fabri1998" target="_blank">https://github.com/fabri1998</a>
+      <a href="https://github.com/fabrizio-muguni" target="_blank">https://github.com/fabri1998</a>
     </p>
   </section>
   <footer>
