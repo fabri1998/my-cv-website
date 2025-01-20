@@ -30,13 +30,16 @@
   background-color: #d0d3d4;
   color: #17202a;
 }
-    nav {
+     nav {
   background-color: #17202a; /* Bakgrundsfärg för menyn */
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
   padding: 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(0); /* Startposition */
+  transition: transform 0.3s ease-in-out; /* Smidig övergång */
 }
 nav ul {
   list-style: none;
@@ -180,7 +183,7 @@ nav ul li a:hover {
       <p>"The best way to predict the future is to create it"</p>
     </div>
   </header>
-  <section id="about">>
+  <section id="about">
     <h2>Om mig</h2>
     <p>Hej och välkommen!
     <p>Jag studerar förnärvarande till IoT-projektledare med en stor passion för att kombinera teknik och affärsutveckling. Med fokus på innovation och resultat drivs jag av att optimera processer, utveckla nya lösningar och skapa värde. 
@@ -288,7 +291,19 @@ nav ul li a:hover {
       backToTopButton.style.display = 'none';
     }
   };
+let lastScrollY = window.scrollY;
 
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > lastScrollY) {
+    // Döljer menyn när du scrollar ner
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    // Visar menyn när du scrollar upp
+    nav.style.transform = 'translateY(0)';
+  }
+  lastScrollY = window.scrollY;
+});
   // Scrolla till toppen
   function scrollToTop() {
     window.scrollTo({
