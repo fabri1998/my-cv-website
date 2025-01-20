@@ -36,18 +36,19 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 10px 20px;
+  padding: 10px 0; /* Avstånd för bättre estetik */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(0); /* Startposition */
-  transition: transform 0.3s ease-in-out; /* Smidig övergång */
+  text-align: center; /* Centrera innehållet */
 }
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: inline-flex; /* Gör så att menylänkarna visas i en rad */
+  gap: 20px; /* Utrymme mellan länkar */
+}
+    nav ul li {
+  display: inline;
 }
 nav ul li a {
   color: #ecf0f1;
