@@ -4,10 +4,54 @@
   <link rel="icon" href="favicon.png.png" type="image/png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabrizio Mugni - IoT - Projektledare</title>
+ <title>Fabrizio Mugni - IoT - Projektledare - "The best way to predict the future is to create it"</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #17202a;
+  color: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Göm knappen initialt */
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+.back-to-top:hover {
+  background-color: #d0d3d4;
+  color: #17202a;
+}
+    nav {
+  background-color: #17202a; /* Bakgrundsfärg för menyn */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #d0d3d4;
+}
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -116,11 +160,20 @@
   </style>
 </head>
 <body>
+  <nav>
+  <ul>
+    <li><a href="#about">Om mig</a></li>
+    <li><a href="#projects">Projekt</a></li>
+    <li><a href="#certificates">Certifikat</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
   <header>
     <div class="profile-card">
       <img src="Me.png" alt="Profilbild">
       <h1>Fabrizio Mugni</h1>
       <p>IoT-Projektledare</p>
+      <p>"The best way to predict the future is to create it"</p>
     </div>
   </header>
   <section>
@@ -217,8 +270,28 @@
     <a href="CV-Fabrizio Mugni.pdf" target="_blank" download="CV-Fabrizio Mugni.pdf">CV-Fabrizio Mugni.pdf</a>
     </p>
   </section>
+  <button class="back-to-top" onclick="scrollToTop()">⬆️ Top</button>
   <footer>
     <p>© 2025 Fabrizio Mugni</p>
   </footer>
+  <script>
+  // Visa/göm back-to-top-knappen
+  window.onscroll = function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (window.scrollY > 200) { // Visa efter 200px scroll
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  };
+
+  // Scrolla till toppen
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
 </body>
 </html>
