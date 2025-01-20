@@ -1,99 +1,107 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png.png" type="image/png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabrizio Mugni - IoT - Projektledare - "The best way to predict the future is to create it"</title>
+  <title>Fabrizio Mugni - IoT - Projektledare</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Navigeringsmeny */
-    nav {
-      background-color: #17202a;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 10px 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    nav ul li a {
-      color: #ecf0f1;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #d0d3d4;
-    }
-
-    /* Back-to-top-knapp */
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #17202a;
-      color: #ecf0f1;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: none;
-      z-index: 1000;
-      transition: opacity 0.3s;
-    }
-    .back-to-top:hover {
-      background-color: #d0d3d4;
-      color: #17202a;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 30px;
-      background-color: #1c2833;
-      color: #ecf0f1;
+      background-color: #1c2833; /* Bakgrundsfärg */
+      color: #ecf0f1; /* Textfärg */
       line-height: 1.6;
     }
-
     header {
       text-align: center;
       padding: 20px;
-      background-color: #17202a;
+      background-color: #17202a; /* Textrutornas bakgrundsfärg */
       border-radius: 10px;
-      color: #ecf0f1;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #ecf0f1; /* Textfärg */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skugga */
     }
-
+    .profile-card {
+        margin: 20px auto;
+        display: inline-block;
+        text-align: center;
+    }
+    .profile-card img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%; /* Rund bild */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Skugga */
+        object-fit: cover; /* Behåll proportioner */
+        object-position: center; /* Fokus på mitten av bilden */
+    }
+    .profile-card h1 {
+      margin: 10px 0 5px;
+      font-size: 1.5em;
+      color: #ecf0f1; /* Textfärg */
+    }
+    .profile-card p {
+      font-size: 1em;
+      color: #ecf0f1; /* Textfärg */
+    }
     section {
-      background-color: #17202a;
+      background-color: #17202a; /* Textrutornas bakgrundsfärg */
       padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skugga */
     }
     section h2 {
       margin-top: 0;
-      color: #ecf0f1;
+      color: #ecf0f1; /* Textfärg */
     }
-
+    a {
+      color: #ecf0f1; /* Textfärg för länkar */
+      text-decoration: none;
+      transition: color 0.3s ease; /* Smooth transition */
+    }
+    a:hover {
+      color: #d0d3d4; /* Ljusare grå vid hover */
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       margin-top: 20px;
       font-size: 0.9em;
-      color: #ecf0f1;
+      color: #ecf0f1; /* Textfärg */
     }
-
-    /* Responsiv design */
+    /* Skills-styling */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .skill {
+      text-align: center;
+      flex: 1 1 100px; /* Flexibel layout */
+      max-width: 120px;
+    }
+    .skill img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 5px; /* Minskad marginal mellan bild och text */
+      filter: brightness(1); /* Anpassad ljusstyrka */
+      transition: transform 0.3s, filter 0.3s;
+    }
+    .skill img:hover {
+      transform: scale(1.1); /* Liten zoom vid hover */
+      filter: brightness(1.5);
+    }
+    .skill p {
+      font-size: 0.9em;
+      color: #ecf0f1; /* Textfärg */
+      margin-top: 0; /* Ingen extra marginal ovanför texten */
+    }
+    /* Responsiv design för mobiler */
     @media (max-width: 768px) {
       body {
         padding: 10px;
@@ -101,88 +109,116 @@
       header h1 {
         font-size: 1.8em;
       }
+      header p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navigeringsmeny -->
-  <nav>
-    <ul>
-      <li><a href="#about">Om mig</a></li>
-      <li><a href="#projects">Projekt</a></li>
-      <li><a href="#certificates">Certifikat</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <!-- Header -->
   <header>
     <div class="profile-card">
       <img src="Me.png" alt="Profilbild">
       <h1>Fabrizio Mugni</h1>
       <p>IoT-Projektledare</p>
-      <p>"The best way to predict the future is to create it"</p>
     </div>
   </header>
-
-  <!-- Sektioner -->
-  <section id="about">
+  <section>
     <h2>Om mig</h2>
-    <p>Hej och välkommen!</p>
-    <p>Jag studerar förnärvarande till IoT-projektledare med en stor passion för att kombinera teknik och affärsutveckling...</p>
+    <p>Hej och välkommen!
+    <p>Jag studerar förnärvarande till IoT-projektledare med en stor passion för att kombinera teknik och affärsutveckling. Med fokus på innovation och resultat drivs jag av att optimera processer, utveckla nya lösningar och skapa värde. 
+        Jag trivs i samarbeten där nyfikenhet och engagemang leder till framgångsrika projekt och mätbara resultat.</p>
   </section>
-
-  <section id="projects">
+  <section>
     <h2>Projekt</h2>
     <ul>
       <li>Diverse projekt med Raspberry Pi, Home Assistant, Z-Wave-sensorer/dongle med mera.</li>
-      <li>AI-kameraprojekt...</li>
-      <!-- Lägg till fler projekt här -->
+      <li>AI-kameraprojekt, från konfiguration till leverans, som hjälper en kommun att räkna gångtrafikanter och cyklister.</li>
+      <li>Skapat dashboards i Grafana för att visualisera olika typer av data, anpassade för kunder i olika branscher.</li>
+      <li>Skrivit guider för installation av sensorer och funktioner riktade till kunder.</li>
+      <li>Egna projekt i IoT-Open och ThingsBoard plattformar för att öka mina kunskaper.</li>
     </ul>
   </section>
-
-  <section id="certificates">
+  <section>
     <h2>Certifikat</h2>
     <ul>
-      <li>Linux Unhatched – Cisco NetAcad (2025)</li>
-      <li>Introduction to Cybersecurity...</li>
+      <li><a href="https://www.credly.com/badges/7eed2efb-d758-4a29-baad-ed9a4bf54a51">Linux Unhatched – Cisco NetAcad (2025)</a></li>
+      <li><a href="https://www.credly.com/badges/98b6f0f5-a251-434c-9b98-21a7f48867f0/linked_in_profile">Introduction to Cybersecurity – Cisco NetAcad (2023)</a></li>
+      <li><a href="https://www.credly.com/badges/4786e3e9-6f7b-4ee7-b50c-95d202240544/linked_in_profile">Networking Basics – Cisco NetAcad (2023)</a></li>
+      <li><a href="https://www.credly.com/badges/2f82454d-a817-4039-90eb-2b35983e7452/linked_in_profile">Introduction to IoT (Internet of Things) – Cisco NetAcad (2023)</a></li>
+      <li>IoT-Open Certified – TH1NG (2024)</li>
     </ul>
   </section>
-
-  <section id="contact">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:fabrizio98@msn.com">fabrizio98@msn.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/fabrizio-mugni-219938224/" target="_blank">linkedin.com/in/fabrizio-mugni-219938224</a></p>
-    <p>GitHub: <a href="https://github.com/fabri1998" target="_blank">github.com/fabri1998</a></p>
-    <p>CV: <a href="CV-Fabrizio Mugni.pdf" target="_blank" download>CV-Fabrizio Mugni.pdf</a></p>
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-13-38.png" title="Grafana">
+        <p>Grafana</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-03-24.png" alt="Node-RED" title="Node-RED">
+        <p>Node-RED</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-10-17.png" alt="IoT-Open" title="IoT-Open">
+        <p>IoT-Open</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-33-22.png" alt="Visual Studio Code" title="Visual Studio Code">
+        <p>Visual Studio Code</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-35-32.png" alt="Raspberry Pi" title="Raspberry Pi">
+        <p>Raspberry Pi</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-37-34.png" alt="GitHub" title="GitHub">
+        <p>GitHub</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-40-07.png" alt="Things Board" title="Things Board">
+        <p>Things Board</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-49-00.png" alt="Docker" title="Docker">
+        <p>Docker</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-50-27.png" alt="MQTT" title="MQTT">
+        <p>MQTT</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-52-06.png" alt="Linux" title="Linux">
+        <p>Linux</p>
+      </div>
+      <div class="skill">
+        <img src="Screenshot from 2025-01-19 16-53-50.png" alt="Python" title="Python">
+        <p>Python</p>
+      </div>
+    </div>
   </section>
-
-  <!-- Back-to-top knapp -->
-  <button class="back-to-top" onclick="scrollToTop()">⬆️ Top</button>
-
-  <!-- Footer -->
+  <section>
+    <h2>Kontakt</h2>
+    <p>
+      <img src="https://img.icons8.com/ios-glyphs/20/555555/new-post.png" alt="E-post" class="icon">
+      <a href="mailto:fabrizio@example.com">fabrizio98@msn.com</a>
+    </p>
+    <p>
+      <img src="https://img.icons8.com/ios-glyphs/20/555555/linkedin.png" alt="LinkedIn" class="icon">
+      <a href="https://www.linkedin.com/in/fabrizio-mugni-219938224/" target="_blank">https://www.linkedin.com/in/fabrizio-mugni-219938224/</a>
+    </p>
+    <p>
+      <img src="https://img.icons8.com/ios-glyphs/20/555555/github.png" alt="GitHub" class="icon">
+      <a href="https://github.com/fabri1998" target="_blank">https://github.com/fabri1998</a>
+      </p>
+     <p>
+      <img src="https://img.icons8.com/ios-glyphs/20/555555/download.png" alt="Download CV" class="icon">
+    <a href="CV-Fabrizio Mugni.pdf" target="_blank" download="CV-Fabrizio Mugni.pdf">CV-Fabrizio Mugni.pdf</a>
+    </p>
+  </section>
   <footer>
     <p>© 2025 Fabrizio Mugni</p>
   </footer>
-
-  <script>
-    // Visa/göm back-to-top-knappen
-    window.onscroll = function() {
-      const backToTopButton = document.querySelector('.back-to-top');
-      if (window.scrollY > 200) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    };
-
-    // Scrolla till toppen
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  </script>
 </body>
 </html>
